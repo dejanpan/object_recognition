@@ -3,8 +3,8 @@ Object Recognition
 
 Framework to recognize objects on Kinect depth images. This project is in early development stage.
 
-You can install the dependencies on ubuntu by executing:
-sudo apt-get install libopencv-dev mayavi2 python-numpy python-scipy python-matplotlib
+You can install the dependencies on ubuntu by executing: `sudo apt-get install mayavi2 python-numpy python-scipy python-matplotlib`
+It also requires python opencv module, so if it is not installed (for example from ROS) install it using `sudo apt-get install python-opencv`
 
 Right now only simple syntetic test is availible:
 
