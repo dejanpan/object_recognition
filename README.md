@@ -10,22 +10,12 @@ Right now only simple syntetic test is availible:
 
 1. Go to the object_recognition directory.
 
-2. Create directories for the generated data:
+2. Create directories for the generated data `mkdir training_data test_data`
 
-`mkdir training_data test_data`
+3. Generate random training and test set: `./generate_random_scenes.py models/ training_data/ 1000` `./generate_random_scenes.py models/ test_data/ 100`
 
-3. Generate random training and test set:
+4. Train a classifier: `./train.py`
 
-`./generate_random_scenes.py models/ training_data/ 1000`
-
-`./generate_random_scenes.py models/ test_data/ 100`
-
-4. Train a classifier:
-
-`./train.py`
-
-5. Test classifier:
-
-`./classify.py`
+5. Test classifier: `./classify.py`
 
 6. It will test computed classifier and show misclassified scenes.
