@@ -8,24 +8,24 @@ sudo apt-get install libopencv-dev mayavi2 python-numpy python-scipy python-matp
 
 Right now only simple syntetic test is availible:
 
-Go to the object_recognition directory.
+1. Go to the object_recognition directory.
 
-Create directories for the generated data:
+2. Create directories for the generated data:
 
-mkdir training_data test_data
+`mkdir training_data test_data`
 
-Generate random training and test set:
+3. Generate random training and test set:
 
-./generate_random_scenes.py models/ training_data/ 1000
+`./generate_random_scenes.py models/ training_data/ 1000`
 
-./generate_random_scenes.py models/ test_data/ 100
+`./generate_random_scenes.py models/ test_data/ 100`
 
-Train a classifier:
+4. Train a classifier:
 
-./train.py
+`./train.py`
 
-Test classifier:
+5. Test classifier:
 
-./classify.py
+`./classify.py`
 
-It will test computed classifier and show misclassified scenes.
+6. It will test computed classifier and show misclassified scenes.
