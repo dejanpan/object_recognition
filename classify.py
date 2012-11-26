@@ -28,7 +28,7 @@ for i in range(num_scenes):
 	plane_normal = camera_matrix[0:3,2]
 	plane_point = camera_matrix[0:3,3]
 
-	mask1 = np.abs(np.dot(points, plane_normal) -  np.dot(plane_point, plane_normal)) > 0.01
+	mask1 = np.abs(np.dot(points, plane_normal) -  np.dot(plane_point, plane_normal)) > 0.05
 	mask2 = points[:,:,2] < 5.0
 	mask = np.logical_and(mask1, mask2)
 
@@ -52,6 +52,7 @@ for i in range(num_scenes):
 		print '\n'
 		pylab.imshow(obj_image)
 		pylab.show()
+	
 
 
 print 'Correctly classified ', correct/num_scenes

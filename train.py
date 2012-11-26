@@ -6,6 +6,7 @@ import numpy as np
 import scipy.misc as spm
 from scipy.ndimage import find_objects, label, map_coordinates
 from depth_util import compute_points, get_model_names
+import pylab
 
 
 models_dir = 'models/'
@@ -32,13 +33,14 @@ for i in range(num_scenes):
 
 	d = np.dot(plane_point, plane_normal)
 	dist = np.dot(points, plane_normal)
-	mask1 = np.abs(dist -  d) > 0.01
+	mask1 = np.abs(dist -  d) > 0.05
 	mask2 = depth_image < 5000.0
 	mask = np.logical_and(mask1, mask2)
 
 	sl = find_objects(mask)
 	try:	
 		obj_image = depth_image[sl[0]]
+		
 	except:
 		continue
 	
